@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
+    <title>Livraria Online</title>
 </head>
 <body>
-    <h1>aula javascript</h1>
+    <h1>Livraria Online</h1>
+    <p>Clique no botão para calcular o desconto.</p>
+    <button onclick="calcularDesconto()">Calcular Desconto</button>
+
     <script>
-        const cidade = "belo horizonte";
-const input = "Belo Horizonte";
+        function calcularDesconto() {
+            constvalorCompra = parseFloat(prompt("Digite o valor total da sua compra"));
+            let desconto = 0;
 
-console.log(cidade === input); // false
+            if (valorCompra > 200) {
+                desconto = 0.2; // 20% de desconto
+            } else if (valorCompra > 100) {
+                desconto = 0.1; // 10% de desconto
+            }
 
-const inputMinusculo = input.toLowerCase();
+            constvalorDesconto = valorCompra * desconto;
 
-// console.log(cidade === input); // false
-
-console.log(cidade === inputMinusculo); //true
-
-</script>
-
-<script>
-        var altura = 5;
-        var comprimento = 10;
-
-         var area = altura * comprimento;
-         console.log(area);
+            alert('Você economizou R$ ${valorDesconto.toFixed(2)} no seu pedido')
+        }
+        
     </script>
 </body>
 </html>
